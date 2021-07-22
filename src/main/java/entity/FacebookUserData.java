@@ -1,5 +1,5 @@
 package entity;
-
+// This class is used to create the Object of FacebookUserData.
 public class FacebookUserData {
 	private String name;
 	private String password;

@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import entity.FacebookUserData;
 
+// this interface is used to communicate between DAO layer and View layer
 public interface daointerface {
 	public int createProfile(FacebookUserData fc);
 

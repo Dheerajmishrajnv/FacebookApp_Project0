@@ -14,6 +14,7 @@ import dao.daointerface;
 import entity.FacebookUserData;
 import utilities.DaoControllerFactory;
 
+// this class is the controller class of application.
 public class FacebookController implements facebookcontrollerinterface {
 
 	private BufferedReader br;
@@ -25,6 +26,7 @@ public class FacebookController implements facebookcontrollerinterface {
 		df = DaoControllerFactory.daoObject();
 	}
 
+// This method use to create profile of user.
 	public void createProfile() throws Exception {
 		fc = new FacebookUserData();
 		System.out.println("Enter the name");
@@ -48,6 +50,7 @@ public class FacebookController implements facebookcontrollerinterface {
 		}
 	}
 
+	// This method use to view profile of user.
 	public void viewProfile() throws Exception {
 		fc = new FacebookUserData();
 		System.out.println("Please enter the name ");
@@ -61,6 +64,7 @@ public class FacebookController implements facebookcontrollerinterface {
 		}
 	}
 
+	// This method use to view profile of all users.
 	public void viewAll() {
 		ArrayList<FacebookUserData> res = df.viewAll();
 		for (FacebookUserData a : res) {
@@ -72,6 +76,7 @@ public class FacebookController implements facebookcontrollerinterface {
 		}
 	}
 
+	// This method use to edit profile of user.
 	public void editProfile() throws Exception {
 		FacebookUserData fc_old = new FacebookUserData();
 		System.out.println("Enter the name to be edited");
@@ -102,6 +107,7 @@ public class FacebookController implements facebookcontrollerinterface {
 		}
 	}
 
+	// This method use to delete profile of user.
 	public void deleteProfile() throws Exception {
 		FacebookUserData fc = new FacebookUserData();
 		System.out.println("Enter name to be deleted");
@@ -114,6 +120,7 @@ public class FacebookController implements facebookcontrollerinterface {
 			System.out.println("Wrong input");
 		}
 	}
+	// This method use to login the profile of user.
 
 	public void loginProfile() throws Exception {
 		fc = new FacebookUserData();
