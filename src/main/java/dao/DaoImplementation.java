@@ -8,10 +8,11 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 
 import entity.FacebookUserData;
-
+// This class implements the daointerface. 
 public class DaoImplementation implements daointerface {
 	private BufferedReader br;
-
+	//This method create the profile of user. 
+	//Return - It will return the integer i.
 	public int createProfile(FacebookUserData fc) {
 		int i = 0;
 		try {
@@ -31,7 +32,8 @@ public class DaoImplementation implements daointerface {
 		}
 		return i;
 	}
-
+	// This method will show the view of a user.
+	// Return - It will return the object of FacebookUser.
 	public FacebookUserData view(FacebookUserData fc) {
 		FacebookUserData fcResult = new FacebookUserData();
 		fcResult = null;
@@ -58,7 +60,8 @@ public class DaoImplementation implements daointerface {
 		}
 		return fcResult;
 	}
-
+	// This method will show the view for the edit.
+	// Return - It will return the object of FacebookUser.
 	public FacebookUserData viewToEdit(FacebookUserData fc) {
 		FacebookUserData fcResult = new FacebookUserData();
 		fcResult = null;
@@ -86,6 +89,8 @@ public class DaoImplementation implements daointerface {
 		}
 		return fcResult;
 	}
+	// This method will show the view of all the user.
+	// Return - It will return ArrayList holding the object of FacebookUser.
 
 	public ArrayList<FacebookUserData> viewAll() {
 		ArrayList<FacebookUserData> store = new ArrayList<FacebookUserData>();
@@ -109,7 +114,8 @@ public class DaoImplementation implements daointerface {
 		return store;
 
 	}
-
+	// This method will perform the login action.
+	// Return - It will return the boolean value b.
 	public boolean loginProfile(FacebookUserData fc) {
 		FacebookUserData fcNew = new FacebookUserData();
 		boolean b = false;
@@ -129,8 +135,9 @@ public class DaoImplementation implements daointerface {
 		}
 		return b;
 	}
-
-	public int deletprofile(FacebookUserData fc) {
+	// This method will delete the user from database.
+	// Return - It will return the integer i.
+	public int deleteprofile(FacebookUserData fc) {
 		int i = 0;
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
@@ -144,7 +151,8 @@ public class DaoImplementation implements daointerface {
 		}
 		return i;
 	}
-
+	// This method will edit the profile.
+		// Return - It will return the integer i.
 	public int editProfile(FacebookUserData fc) throws Exception {
 		int i = 0;
 		try {

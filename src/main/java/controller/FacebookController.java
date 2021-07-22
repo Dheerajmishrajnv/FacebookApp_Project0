@@ -107,7 +107,7 @@ public class FacebookController implements facebookcontrollerinterface {
 		System.out.println("Enter name to be deleted");
 		String a = br.readLine();
 		fc.setName(a);
-		int i = df.deletprofile(fc);
+		int i = df.deleteprofile(fc);
 		if (i > 0) {
 			System.out.println("The file deleted successfully");
 		} else {

@@ -15,7 +15,7 @@ public interface daointerface {
 
 	public boolean loginProfile(FacebookUserData fc);
 
-	public int deletprofile(FacebookUserData fc);
+	public int deleteprofile(FacebookUserData fc);
 
 	public FacebookUserData viewToEdit(FacebookUserData fc_old);
 }
