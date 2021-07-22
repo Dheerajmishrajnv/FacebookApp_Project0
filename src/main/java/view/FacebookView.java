@@ -6,8 +6,9 @@ import java.io.InputStreamReader;
 import controller.facebookcontrollerinterface;
 import utilities.ControllerFactory;
 
+// This is driver class.
 public class FacebookView {
-
+// This method is driver method.
 	public static void main(String[] args) throws Exception {
 		String s = "y";
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
